@@ -1,0 +1,319 @@
+/* Reset dan dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0d0d0d;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* Link */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: #c7975a;
+}
+
+/* Navbar */
+.navbar {
+  background: #111;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo span {
+  color: #c7975a;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li a {
+  font-weight: 500;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #c7975a;
+  transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.3rem;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #0d0d0d, #1a1a1a);
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+.kopi {
+  color: #c7975a;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.btn {
+  background: #c7975a;
+  color: #fff;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #b3803d;
+}
+
+.hero-img img {
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Tentang */
+.tentang {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  background-color: #1a1a1a;
+  gap: 2rem;
+  align-items: center;
+}
+
+.tentang-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.tentang-text {
+  flex: 1;
+}
+
+.tentang-text h2 {
+  font-size: 2rem;
+  color: #c7975a;
+  margin-bottom: 1rem;
+}
+
+.tentang-text h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.tentang-text p {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+/* Menu */
+.menu {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #0d0d0d;
+}
+
+.menu h2 {
+  font-size: 2rem;
+  color: #c7975a;
+  margin-bottom: 1rem;
+}
+
+.menu p {
+  color: #bbb;
+}
+
+.menu-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.menu-item {
+  background: #1a1a1a;
+  padding: 1.2rem;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item:hover {
+  transform: translateY(-8px);
+}
+
+.menu-item img {
+  width: 100%;
+  max-width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.menu-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.menu-item p {
+  color: #c7975a;
+}
+
+/* Kontak */
+.kontak {
+  padding: 4rem 2rem;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+.kontak h2 {
+  font-size: 2rem;
+  color: #c7975a;
+  margin-bottom: 1rem;
+}
+
+.kontak-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.map iframe {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  border-radius: 10px;
+  border: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+form input,
+form button {
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+form input {
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+form button {
+  background-color: #c7975a;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #b3803d;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #aaa;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer .social a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+footer .social a:hover {
+  color: #c7975a;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem 0;
+  gap: 2rem;
+}
+
+.footer-nav a {
+  color: #ccc;
+  font-weight: 500;
+}
+
+.credit {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
